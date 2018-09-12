@@ -1,4 +1,8 @@
 ﻿@charset "utf-8" ;
+@font-face {
+    font-family: CentryGothic;
+    src: url('CenturyGothic.ttf') format('truetype');
+}
 /*
    New Perspectives on HTML5 and CSS3, 7th Edition
    Tutorial 2
@@ -19,7 +23,7 @@ html {
 }
 body {
     background-color: rgb(227, 210, 173);
-    font-family: 'Centry Gothic', sans-serif
+    font-family: 'Centry Gothic', CentryGothic, sans-serif;
 }
 
 body footer {
@@ -65,13 +69,49 @@ article#tour_summary h1 {
 
 article#tour_summary p {
     font-size: 1.1em;
-    
+}
+
+ article#tour_summary>p:first-of-type::first-line {
+    font-size: 1.2em; 
+    letter-spacing: 0.2em;
 }
 
 
 /* Aside Styles */
+aside#tour_itinerary h1 {
+    font-size: 1.2em;
 
+}
 
+aside#tour_itinerary h2{
+    font-size: 0.9em;
+}
+ 
+aside#tour_itinerary p {
+    size: 0.8em;
+}
 
+aside#tour_itinerary h2:nth-of-type(odd) {
+    color: rgb(79, 91, 40);
+}
+
+aside#tour_itinerary h2:nth-of-type(even) {
+    color:  rgb(81, 95, 175); 
+}
+ 
+aside#tour_itinerary p:nth-of-type(odd) {
+    color: rgb(79, 91, 40);
+}
+
+aside#tour_itinerary p:nth-of-type(even) {
+    color:  rgb(81, 95, 175); 
+}
 /* Blockquote Styles */
+blockquote {
+    background-color: rgb(173, 189, 227);
+    color: rgba(255, 255, 255, 0.65);
+}
 
+ blockquote p {
+    padding: 25px 10px 25px 10px;
+}
